@@ -1,0 +1,81 @@
+{
+    "categories": [
+        {
+            "id": "e9f8c375-3599-456e-993e-f812aa2d3b62",
+            "name": "Desszert",
+            "description": null,
+            "created_at": "2026-04-06T12:45:25.351Z",
+            "updated_at": "2026-05-06T13:02:23.444Z"
+        },
+        {
+            "id": "ab568641-350c-4005-ac4f-fbf6dd7e19d7",
+            "name": "Főételek - ebéd & vacsora",
+            "description": null,
+            "created_at": "2025-08-04T16:13:03.314Z",
+            "updated_at": "2026-05-06T13:03:55.848Z"
+        },
+        {
+            "id": "2d325131-0e13-43e3-a214-89ec9772d54a",
+            "name": "Főzelékek és köretek",
+            "description": null,
+            "created_at": "2026-04-06T12:45:25.351Z",
+            "updated_at": "2026-05-06T13:03:36.002Z"
+        },
+        {
+            "id": "552e3d04-a7e2-47cf-b3a8-c1b7c748d15e",
+            "name": "\"Gyorskaják\": Szendvics/Wrap/Taco/Burger/Pizza",
+            "description": null,
+            "created_at": "2026-04-06T12:45:25.351Z",
+            "updated_at": "2026-05-06T13:15:36.808Z"
+        },
+        {
+            "id": "5efb27fc-7022-4a17-8517-710f48de5a88",
+            "name": "Levesek",
+            "description": null,
+            "created_at": "2026-04-06T12:45:25.351Z",
+            "updated_at": "2026-05-06T13:03:40.641Z"
+        },
+        {
+            "id": "64f59eac-428b-4f97-8589-3193c3e72750",
+            "name": "Ninja Creami fagyi",
+            "description": null,
+            "created_at": "2026-04-06T12:45:25.351Z",
+            "updated_at": "2026-05-06T13:02:33.885Z"
+        },
+        {
+            "id": "b721540b-402c-4414-988d-5eea62999fca",
+            "name": "Reggeli - édes",
+            "description": null,
+            "created_at": "2026-04-06T12:45:25.351Z",
+            "updated_at": "2026-05-06T13:02:14.590Z"
+        },
+        {
+            "id": "d55f7cf0-7eb7-435d-bdc8-73624985dd40",
+            "name": "Reggeli - sós",
+            "description": null,
+            "created_at": "2026-04-06T12:45:25.351Z",
+            "updated_at": "2026-05-06T13:02:44.443Z"
+        },
+        {
+            "id": "08ca8e76-cf32-45e3-832c-28599a0d39cc",
+            "name": "Smoothiek",
+            "description": null,
+            "created_at": "2026-04-06T12:45:25.351Z",
+            "updated_at": "2026-05-06T13:04:06.391Z"
+        },
+        {
+            "id": "1ea0747a-e2f3-48c6-9089-1b1d2f0d645a",
+            "name": "Sós nasik",
+            "description": null,
+            "created_at": "2026-04-06T12:45:25.351Z",
+            "updated_at": "2026-05-06T13:02:51.806Z"
+        },
+        {
+            "id": "751a33ad-1662-4ff5-a7be-422fb14ecfc2",
+            "name": "Szendvicskrémek",
+            "description": null,
+            "created_at": "2026-04-06T12:45:25.351Z",
+            "updated_at": "2026-05-06T13:03:29.666Z"
+        }
+    ]
+}

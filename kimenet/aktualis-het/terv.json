@@ -1,0 +1,32 @@
+{
+ "menu": [
+  {
+   "slot": "reggeli",
+   "recipe": "fc0c0858",
+   "szandi": 1,
+   "csabi": 1
+  },
+  {
+   "slot": "ebéd",
+   "recipe": "7c5bf693",
+   "szandi": 1,
+   "csabi": 1.2
+  },
+  {
+   "slot": "vacsora",
+   "recipe": "bfd2f295",
+   "szandi": 1,
+   "csabi": 1.2
+  },
+  {
+   "slot": "snack",
+   "recipe": "4aedc716",
+   "szandi": 1,
+   "csabi": 1
+  }
+ ],
+ "days": {
+  "szandi": 5,
+  "csabi": 5
+ }
+}

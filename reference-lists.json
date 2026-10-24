@@ -1,0 +1,32 @@
+{
+ "note": "Nem receptek: referencia-listák (pl. 100 kalóriányi zöldség). Az étrendtervező nem használja automatikusan.",
+ "items": [
+  {
+   "id": "33acaa05-eadc-44e9-98ff-2c036e30d5e1",
+   "name": "30g fehérjeforrások lista",
+   "instructions": "<p><a href=\"https://canva.link/sp70tfy43bzgmxs\">Itt megtaláljátok a 30g fehérjeforrások listáját - kattints </a></p>\n",
+   "calories_per_serving": 30,
+   "category": "Főételek - ebéd & vacsora",
+   "ingredients": null,
+   "label": "30g fehérjeforrások letölthető lista"
+  },
+  {
+   "id": "74b12c34-f8ee-4cd2-abf1-e22170117db9",
+   "name": "100 kalória gyümölcsök lista",
+   "instructions": "<p><a href=\"https://canva.link/y8zyt9rpiwaj8n8\">Itt megtaláljátok a 100 kalóriás gyümölcsök listát - kattints</a></p>\n",
+   "calories_per_serving": 100,
+   "category": null,
+   "ingredients": null,
+   "label": "100 kalória gyümölcsök letölthető lista"
+  },
+  {
+   "id": "22b34449-c1c8-4011-a14f-af176a2db5ed",
+   "name": "100 kalória zöldségek lista",
+   "instructions": "<p><a href=\"https://canva.link/o37fc43yk9oueb0\">Itt találhatjátok a 100 kalóriás zöldségek listát - kattints </a></p>\n",
+   "calories_per_serving": 100,
+   "category": null,
+   "ingredients": [],
+   "label": "100 kalória zöldségek letölthető lista"
+  }
+ ]
+}
