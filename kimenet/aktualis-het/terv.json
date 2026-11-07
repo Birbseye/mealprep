@@ -2,31 +2,48 @@
  "menu": [
   {
    "slot": "reggeli",
-   "recipe": "fc0c0858",
-   "szandi": 1,
-   "csabi": 1
+   "recipe": "8ac2c642",
+   "szandi": 0.944,
+   "csabi": 1.065
   },
   {
    "slot": "ebéd",
-   "recipe": "7c5bf693",
-   "szandi": 1,
-   "csabi": 1.2
+   "recipe": "54f2c7db",
+   "szandi": 1.25,
+   "csabi": 1.25
   },
   {
    "slot": "vacsora",
-   "recipe": "bfd2f295",
+   "recipe": "879f2469",
    "szandi": 1,
-   "csabi": 1.2
+   "csabi": 1
   },
   {
    "slot": "snack",
-   "recipe": "4aedc716",
+   "recipe": "ac7d0c3e",
    "szandi": 1,
-   "csabi": 1
+   "csabi": 1.3333
   }
  ],
  "days": {
   "szandi": 5,
   "csabi": 5
- }
+ },
+ "skip": [
+  {
+   "person": "szandi",
+   "slot": "ebéd",
+   "days": 1
+  },
+  {
+   "person": "szandi",
+   "slot": "vacsora",
+   "days": 1
+  },
+  {
+   "person": "csabi",
+   "slot": "vacsora",
+   "days": 1
+  }
+ ]
 }

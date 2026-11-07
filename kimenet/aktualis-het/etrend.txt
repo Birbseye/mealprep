@@ -1,30 +1,39 @@
 ÉTRENDTERV
 
 Feltevések:
-- 5 nap, Szandi és Csabi is minden nap, minden étkezést eszik.
-- Mealprep: minden nap ugyanaz a 4 étel.
-- A reggeli édes. Az előző hét receptjeit nem ismételtem. Nincs kizárt hozzávaló vagy recept.
-- Csabi ebédje és vacsorája 1,2x adag.
+- 5 nap, mealprep: minden nap ugyanaz a 4 étel
+- Szandi 5 napig eszik, egy napon nem eszik ebédet és vacsorát
+- Csabi 5 napig eszik, egy napon nem eszik vacsorát
+- A receptek az adatbázisból: a "Gombás csirkés rakott tészta" pontos nevű recept nincs, a legközelebbi és kalóriában egyező a "Csirkés-gombás rakott spagetti" (363 kcal/adag, 5 adag = 1815 kcal, ez egyezik a 1816-tal)
+- A Reggeli tortilla pizza szerepelt az előző héten is, de kifejezett kérésre megint ez van
 
-Reggeli: Karamellizált banános joghurttál
-- Szandi: 1 adag, 403 kcal
-- Csabi: 1 adag, 403 kcal
+Reggeli: Reggeli tortilla pizza (414 kcal/adag az adatbázisban)
+- Szandi: 0,944 adag = 391 kcal
+- Csabi: 1,065 adag = 441 kcal
 
-Ebéd: Csirkés kukoricás tészta baconnel
-- Szandi: 1 adag, 451 kcal
-- Csabi: 1,2 adag, 541 kcal
+Ebéd: Csirkés-gombás rakott spagetti (363 kcal/adag)
+- Szandi: 1,25 adag = 454 kcal
+- Csabi: 1,25 adag = 454 kcal
 
-Vacsora: Krémsajtos, cukkinis tészta csirkemellel
-- Szandi: 1 adag, 461 kcal
-- Csabi: 1,2 adag, 553 kcal
+Vacsora: Egy tepsis magyaros csirkecomb (422 kcal/adag)
+- Szandi: 1 adag = 422 kcal
+- Csabi: 1 adag = 422 kcal (+ kb. 50 kcal zöldség/savanyúság/szósz, ez nem recept)
 
-Snack: Csokis-diós zabkeksz
-- Szandi: 1 adag, 152 kcal
-- Csabi: 1 adag, 152 kcal
+Snack: Aranygaluska pudinggal (261 kcal/adag)
+- Szandi: 1 adag = 261 kcal
+- Csabi: 1,333 adag = 348 kcal
 
-NAPI ÖSSZESEN
+Napi összes kcal (egy teljes napon):
+- Szandi: 1528 kcal (cél 1600, puffer kb. 72 kcal)
+- Csabi: 1665 kcal receptekből + kb. 50 kcal hozzáadott zöldség/szósz = kb. 1715 kcal (cél 1800, puffer kb. 85 kcal)
 
-- Szandi: 1467 kcal (keret: 1450-1500)
-- Csabi: 1649 kcal (keret: 1650-1700, 1 kcal-lal a sáv alatt)
+Kimaradó étkezések:
+- Szandi egy napon nincs ebéd és vacsora (aznap 391 + 261 = 652 kcal a receptekből)
+- Csabi egy napon nincs vacsora
 
-Kiszállás: nincs, mindketten mind az 5 napot otthon eszik.
+Eltérések az adatbázis és a megadott számok között:
+- Rakott spagetti: DB 363 kcal/adag, a megadott 1816 kcal = 5 DB adag. Egyezik.
+- Csirkecomb: DB 422 kcal/adag, a megadott 1266 kcal = 3 DB adag. Egyezik.
+- Aranygaluska: DB 261 kcal/adag, a megadott 1044 kcal = 4 DB adag. Egyezik.
+- A megadott "1 adag" tehát 5, 3, illetve 4 adatbázis-adag. Itt minden szám DB-adagban szerepel.
+- Szandi 1528 kcal a receptekre szánt 1450-1500 sáv fölött van, de a 1600 kcal célhoz képest még 72 kcal puffer marad, ezért ez a terv része.
