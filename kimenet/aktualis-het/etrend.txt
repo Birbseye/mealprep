@@ -1,39 +1,33 @@
 ÉTRENDTERV
 
 Feltevések:
-- 5 nap, mealprep: minden nap ugyanaz a 4 étel
-- Szandi 5 napig eszik, egy napon nem eszik ebédet és vacsorát
-- Csabi 5 napig eszik, egy napon nem eszik vacsorát
-- A receptek az adatbázisból: a "Gombás csirkés rakott tészta" pontos nevű recept nincs, a legközelebbi és kalóriában egyező a "Csirkés-gombás rakott spagetti" (363 kcal/adag, 5 adag = 1815 kcal, ez egyezik a 1816-tal)
-- A Reggeli tortilla pizza szerepelt az előző héten is, de kifejezett kérésre megint ez van
+- 5 napos hét (hétfő–péntek), mealprep: minden nap ugyanaz a 4 étel, az adagok a képen megadott terv szerintiek
+- Hétfő, kedd, péntek: teljes nap (reggeli, ebéd, vacsora, snack) mindkettőjüknek
+- Szerda: csak reggeli és ebéd
+- Csütörtök: csak vacsora
+- Összesen személyenként: 4 reggeli, 4 ebéd, 4 vacsora, Szandinak 3, Csabinak 6 szelet snack
+- Az adatbázis kalóriái kicsit eltérnek a képtől (palacsinta 354 vs ~369, marharagu 438 vs 498, csirkesaláta 154 vs ~184 kcal), kb. 40 kcal/nap különbség
 
-Reggeli: Reggeli tortilla pizza (414 kcal/adag az adatbázisban)
-- Szandi: 0,944 adag = 391 kcal
-- Csabi: 1,065 adag = 441 kcal
+SZANDI (1600 kcal)
 
-Ebéd: Csirkés-gombás rakott spagetti (363 kcal/adag)
-- Szandi: 1,25 adag = 454 kcal
-- Csabi: 1,25 adag = 454 kcal
+- Reggeli: Reszelt almás amerikai palacsinta, 1 adag (354 kcal) + 50 kcal joghurt/gyümölcs
+- Ebéd: Lencsés-gombás marharagu tésztával, 1 adag (438 kcal)
+- Vacsora: Sütőtökös csirkesaláta, 1 adag (154 kcal) + 70 g kovászos bagett (200 kcal) + 50 kcal zöldség
+- Snack: Pudingos leveles, 1 szelet (187 kcal)
+- Maradék kb. 60 kcal: extra zöldség/gyümölcs, tej a kávéba
 
-Vacsora: Egy tepsis magyaros csirkecomb (422 kcal/adag)
-- Szandi: 1 adag = 422 kcal
-- Csabi: 1 adag = 422 kcal (+ kb. 50 kcal zöldség/savanyúság/szósz, ez nem recept)
+CSABI (1800 kcal)
 
-Snack: Aranygaluska pudinggal (261 kcal/adag)
-- Szandi: 1 adag = 261 kcal
-- Csabi: 1,333 adag = 348 kcal
+- Reggeli: Reszelt almás amerikai palacsinta, 1 adag (354 kcal) + 100 kcal joghurt/gyümölcs
+- Ebéd: Lencsés-gombás marharagu tésztával, 1 adag (438 kcal)
+- Vacsora: Sütőtökös csirkesaláta, 1 adag (154 kcal) + 70 g kovászos bagett (200 kcal) + 50 kcal zöldség
+- Snack: Pudingos leveles, 2 szelet (374 kcal)
+- Maradék kb. 25 kcal: extra zöldség/gyümölcs, tej a kávéba
 
-Napi összes kcal (egy teljes napon):
-- Szandi: 1528 kcal (cél 1600, puffer kb. 72 kcal)
-- Csabi: 1665 kcal receptekből + kb. 50 kcal hozzáadott zöldség/szósz = kb. 1715 kcal (cél 1800, puffer kb. 85 kcal)
+NAPOK
 
-Kimaradó étkezések:
-- Szandi egy napon nincs ebéd és vacsora (aznap 391 + 261 = 652 kcal a receptekből)
-- Csabi egy napon nincs vacsora
-
-Eltérések az adatbázis és a megadott számok között:
-- Rakott spagetti: DB 363 kcal/adag, a megadott 1816 kcal = 5 DB adag. Egyezik.
-- Csirkecomb: DB 422 kcal/adag, a megadott 1266 kcal = 3 DB adag. Egyezik.
-- Aranygaluska: DB 261 kcal/adag, a megadott 1044 kcal = 4 DB adag. Egyezik.
-- A megadott "1 adag" tehát 5, 3, illetve 4 adatbázis-adag. Itt minden szám DB-adagban szerepel.
-- Szandi 1528 kcal a receptekre szánt 1450-1500 sáv fölött van, de a 1600 kcal célhoz képest még 72 kcal puffer marad, ezért ez a terv része.
+- Hétfő: reggeli, ebéd, vacsora, snack
+- Kedd: reggeli, ebéd, vacsora, snack
+- Szerda: reggeli, ebéd
+- Csütörtök: vacsora
+- Péntek: reggeli, ebéd, vacsora, snack

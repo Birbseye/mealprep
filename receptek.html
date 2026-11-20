@@ -1,0 +1,1273 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f2eb" />
+    <title>Recepttár | KajaKalkulátor</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f4f2eb;
+        --white: #fffefa;
+        --ink: #1c3028;
+        --muted: #6f7a72;
+        --line: #dedfd5;
+        --green: #355b48;
+        --green-light: #e3ebe1;
+        --tomato: #bd4d37;
+        --tomato-light: #f4e3dc;
+        --yellow: #e6bd58;
+        --blue: #477486;
+        --shadow: 0 16px 42px rgb(26 44 34 / 12%);
+        --display: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+        --body: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background-color: var(--paper);
+        background-image:
+          linear-gradient(90deg, rgb(40 70 52 / 2%) 1px, transparent 1px),
+          linear-gradient(rgb(40 70 52 / 2%) 1px, transparent 1px);
+        background-size: 30px 30px;
+        font-family: var(--body);
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+      button {
+        color: inherit;
+      }
+
+      .topbar {
+        min-height: 66px;
+        padding: 0 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(28 48 40 / 12%);
+        background: rgb(255 254 250 / 75%);
+      }
+
+      .wordmark {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .brand-mark {
+        width: 28px;
+        height: 28px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--green);
+        border-radius: 50%;
+        color: var(--green);
+        font-family: var(--display);
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 0;
+      }
+
+      .top-meta {
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      main {
+        width: min(1320px, 92vw);
+        margin: 0 auto;
+        padding: 48px 0 76px;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        gap: 24px;
+        margin-bottom: 30px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--tomato);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 0;
+        font-family: var(--display);
+        font-size: clamp(36px, 4vw, 54px);
+        font-weight: 500;
+        line-height: 1.02;
+      }
+
+      .intro-note {
+        max-width: 260px;
+        margin: 0 0 4px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: right;
+      }
+
+      .searchbar {
+        min-height: 64px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 12px 10px 21px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: var(--white);
+        box-shadow: 0 3px 12px rgb(26 44 34 / 3%);
+      }
+
+      .search-field {
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .search-icon {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        flex: 0 0 18px;
+        border: 1.7px solid var(--green);
+        border-radius: 50%;
+      }
+
+      .search-icon::after {
+        position: absolute;
+        right: -5px;
+        bottom: -3px;
+        width: 7px;
+        height: 1.7px;
+        background: var(--green);
+        content: "";
+        transform: rotate(48deg);
+        transform-origin: left center;
+      }
+
+      #search {
+        width: 100%;
+        min-width: 0;
+        padding: 7px 0;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: var(--ink);
+        font-size: 16px;
+      }
+
+      #search::placeholder {
+        color: #929990;
+      }
+
+      .result-count {
+        padding: 8px 12px;
+        border-left: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .workspace {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+        align-items: start;
+        gap: clamp(28px, 5vw, 72px);
+        margin-top: 32px;
+      }
+
+      .filters {
+        position: sticky;
+        top: 18px;
+        padding: 3px 0;
+      }
+
+      .filter-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 0 0 20px;
+      }
+
+      .filter-heading h2 {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .text-button {
+        padding: 3px 0;
+        border: 0;
+        border-bottom: 1px solid transparent;
+        background: transparent;
+        color: var(--tomato);
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .text-button:hover,
+      .text-button:focus-visible {
+        border-bottom-color: currentColor;
+      }
+
+      .filter-group {
+        padding: 17px 0 19px;
+        border-top: 1px solid var(--line);
+      }
+
+      .filter-group h3 {
+        margin: 0 0 12px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .chip-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip-fieldset {
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      .chip {
+        min-height: 34px;
+        padding: 6px 12px;
+        border: 1px solid #cbd1c7;
+        border-radius: 999px;
+        background: rgb(255 254 250 / 48%);
+        color: #405248;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 650;
+        transition:
+          background-color 0.16s ease,
+          color 0.16s ease,
+          border-color 0.16s ease,
+          transform 0.16s ease;
+      }
+
+      .chip:hover {
+        border-color: var(--green);
+        transform: translateY(-1px);
+      }
+      .chip[aria-pressed="true"] {
+        border-color: var(--green);
+        background: var(--green);
+        color: white;
+      }
+      .chip[data-taste="sweet"][aria-pressed="true"] {
+        border-color: var(--tomato);
+        background: var(--tomato);
+      }
+
+      .filter-footnote {
+        margin: 5px 0 0;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .results-head {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 13px;
+      }
+
+      .results-head h2 {
+        margin: 0;
+        font-family: var(--display);
+        font-size: 23px;
+        font-weight: 500;
+      }
+
+      .sort-control {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .sort-control select {
+        max-width: 150px;
+        padding: 7px 22px 7px 8px;
+        border: 0;
+        border-bottom: 1px solid var(--line);
+        background: transparent;
+        color: var(--ink);
+        cursor: pointer;
+        font-size: 12px;
+      }
+
+      .recipe-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .recipe-card {
+        position: relative;
+        min-width: 0;
+        min-height: 172px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 19px 20px 17px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: var(--white);
+        text-align: left;
+        cursor: pointer;
+        transition:
+          border-color 0.16s ease,
+          box-shadow 0.16s ease,
+          transform 0.16s ease;
+      }
+
+      .recipe-card::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--card-accent, var(--green));
+        content: "";
+        transform: scaleY(0.22);
+        transform-origin: top;
+        transition: transform 0.18s ease;
+      }
+
+      .recipe-card:hover,
+      .recipe-card:focus-visible {
+        z-index: 1;
+        border-color: #9baa9c;
+        box-shadow: 0 8px 24px rgb(26 44 34 / 9%);
+        outline: 0;
+        transform: translateY(-2px);
+      }
+
+      .recipe-card:hover::before,
+      .recipe-card:focus-visible::before {
+        transform: scaleY(1);
+      }
+
+      .card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 13px;
+      }
+
+      .category-label {
+        max-width: 75%;
+        overflow: hidden;
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 750;
+        letter-spacing: 0.08em;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .calorie-label {
+        color: var(--tomato);
+        font-size: 12px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .recipe-card h3 {
+        margin: 0 0 10px;
+        font-family: var(--display);
+        font-size: 21px;
+        font-weight: 550;
+        line-height: 1.12;
+        overflow-wrap: anywhere;
+      }
+
+      .macro-line {
+        min-height: 19px;
+        margin: auto 0 0;
+        color: #5b6b61;
+        font-size: 11px;
+      }
+
+      .ingredient-preview {
+        display: -webkit-box;
+        margin: 10px 0 0;
+        overflow: hidden;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.4;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .empty-state,
+      .load-state {
+        grid-column: 1 / -1;
+        padding: 42px 28px;
+        border: 1px dashed #bfc7bd;
+        background: rgb(255 254 250 / 55%);
+        text-align: center;
+      }
+
+      .empty-state h3,
+      .load-state h2 {
+        margin-bottom: 7px;
+        font-family: var(--display);
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .empty-state p,
+      .load-state p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .load-state {
+        max-width: 560px;
+        margin: 70px auto;
+      }
+
+      .load-button {
+        margin-top: 18px;
+        padding: 9px 14px;
+        border: 1px solid var(--green);
+        border-radius: 3px;
+        background: var(--green);
+        color: white;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      dialog {
+        width: min(760px, calc(100vw - 28px));
+        max-width: none;
+        max-height: min(88vh, 900px);
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid rgb(28 48 40 / 18%);
+        border-radius: 5px;
+        background: var(--white);
+        color: var(--ink);
+        box-shadow: var(--shadow);
+      }
+
+      dialog::backdrop {
+        background: rgb(21 34 27 / 58%);
+        backdrop-filter: blur(3px);
+      }
+
+      .dialog-scroll {
+        max-height: min(88vh, 900px);
+        overflow-y: auto;
+      }
+
+      .dialog-top {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: flex-end;
+        padding: 12px 14px 0;
+        background: linear-gradient(var(--white) 74%, transparent);
+      }
+
+      .close-button {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        background: var(--white);
+        cursor: pointer;
+        font-size: 23px;
+        line-height: 1;
+      }
+
+      .detail-content {
+        padding: 2px clamp(22px, 6vw, 52px) 42px;
+      }
+      .detail-category {
+        margin: 0 0 9px;
+        color: var(--tomato);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .detail-content h2 {
+        margin: 0;
+        font-family: var(--display);
+        font-size: clamp(30px, 6vw, 46px);
+        font-weight: 500;
+        line-height: 1.05;
+      }
+
+      .detail-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 9px;
+        margin: 20px 0 28px;
+      }
+
+      .meta-pill {
+        padding: 7px 11px;
+        border-radius: 999px;
+        background: var(--green-light);
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .meta-pill.calories {
+        background: var(--tomato-light);
+        color: var(--tomato);
+      }
+
+      .detail-section {
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+      }
+      .detail-section + .detail-section {
+        margin-top: 24px;
+      }
+      .detail-section h3 {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 850;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .ingredient-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 24px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .ingredient-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #e8e8df;
+        color: #374c40;
+        font-size: 13px;
+      }
+
+      .instructions {
+        color: #35473d;
+        font-size: 14px;
+        line-height: 1.72;
+      }
+      .instructions p {
+        margin: 0 0 12px;
+      }
+      .instructions ol,
+      .instructions ul {
+        padding-left: 22px;
+      }
+      .instructions li {
+        padding-left: 4px;
+        margin-bottom: 9px;
+      }
+      .instructions a {
+        color: var(--tomato);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+      .instructions pre {
+        overflow-x: auto;
+        padding: 12px;
+        background: #f1f0e9;
+        white-space: pre-wrap;
+      }
+
+      .footer-note {
+        margin-top: 25px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      @media (max-width: 850px) {
+        main {
+          width: min(100% - 34px, 700px);
+          padding-top: 34px;
+        }
+        .workspace {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .filters {
+          position: static;
+        }
+        .filter-group {
+          display: grid;
+          grid-template-columns: 105px 1fr;
+          align-items: start;
+          gap: 12px;
+          padding: 13px 0;
+        }
+        .filter-group h3 {
+          margin: 8px 0 0;
+        }
+        .filter-footnote {
+          grid-column: 2;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .topbar {
+          min-height: 58px;
+          padding: 0 17px;
+        }
+        .top-meta {
+          font-size: 9px;
+        }
+        main {
+          width: calc(100% - 30px);
+          padding-top: 28px;
+        }
+        .intro {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+        h1 {
+          font-size: 39px;
+        }
+        .intro-note {
+          max-width: none;
+          text-align: left;
+        }
+        .searchbar {
+          min-height: 58px;
+          padding-left: 15px;
+        }
+        #search {
+          font-size: 14px;
+        }
+        .result-count {
+          padding: 7px 3px 7px 10px;
+          font-size: 10px;
+        }
+        .filter-group {
+          grid-template-columns: 1fr;
+          gap: 9px;
+        }
+        .filter-group h3 {
+          margin: 0;
+        }
+        .filter-footnote {
+          grid-column: 1;
+        }
+        .recipe-grid {
+          grid-template-columns: 1fr;
+          gap: 9px;
+        }
+        .recipe-card {
+          min-height: 150px;
+          padding: 17px 17px 15px;
+        }
+        .results-head {
+          align-items: end;
+        }
+        .results-head h2 {
+          font-size: 21px;
+        }
+        .sort-control span {
+          display: none;
+        }
+        .ingredient-list {
+          grid-template-columns: 1fr;
+        }
+        .detail-content {
+          padding-right: 22px;
+          padding-left: 22px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .recipe-card,
+        .chip,
+        .recipe-card::before {
+          transition-duration: 0.01ms;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="KajaKalkulátor recepttár">
+        <span class="brand-mark" aria-hidden="true">K</span>
+        <span>KajaKalkulátor</span>
+      </a>
+      <div class="top-meta">Saját receptgyűjtemény</div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">A konyhai jegyzetekből</p>
+          <h1 id="page-title">Recepttár</h1>
+        </div>
+        <p class="intro-note">
+          Keresd meg, szűrd le, és nyisd meg, amit ma főznél.
+        </p>
+      </section>
+
+      <section class="searchbar" aria-label="Receptkeresés">
+        <div class="search-field">
+          <span class="search-icon" aria-hidden="true"></span>
+          <input
+            id="search"
+            type="search"
+            aria-label="Keresés a receptekben"
+            placeholder="Keress névre, hozzávalóra, kategóriára…"
+            autocomplete="off"
+          />
+        </div>
+        <output id="result-count" class="result-count" aria-live="polite"
+          >Betöltés…</output
+        >
+      </section>
+
+      <div class="workspace" id="app" hidden>
+        <aside class="filters" aria-label="Receptszűrők">
+          <div class="filter-heading">
+            <h2>Szűrők</h2>
+            <button class="text-button" id="clear-filters" type="button">
+              Mind törlése
+            </button>
+          </div>
+          <section class="filter-group" aria-labelledby="taste-heading">
+            <h3 id="taste-heading">Jelleg</h3>
+            <fieldset class="chip-fieldset">
+              <div class="chip-list">
+                <button
+                  class="chip"
+                  type="button"
+                  data-taste="sweet"
+                  aria-pressed="false"
+                >
+                  Édes
+                </button>
+                <button
+                  class="chip"
+                  type="button"
+                  data-taste="savory"
+                  aria-pressed="false"
+                >
+                  Sós
+                </button>
+              </div>
+            </fieldset>
+          </section>
+          <section class="filter-group" aria-labelledby="occasion-heading">
+            <h3 id="occasion-heading">Étkezés</h3>
+            <fieldset class="chip-fieldset">
+              <div class="chip-list">
+                <button
+                  class="chip"
+                  type="button"
+                  data-occasion="breakfast"
+                  aria-pressed="false"
+                >
+                  Reggeli
+                </button>
+                <button
+                  class="chip"
+                  type="button"
+                  data-occasion="lunch"
+                  aria-pressed="false"
+                >
+                  Ebéd
+                </button>
+                <button
+                  class="chip"
+                  type="button"
+                  data-occasion="dinner"
+                  aria-pressed="false"
+                >
+                  Vacsora
+                </button>
+                <button
+                  class="chip"
+                  type="button"
+                  data-occasion="snack"
+                  aria-pressed="false"
+                >
+                  Snack
+                </button>
+              </div>
+            </fieldset>
+            <p class="filter-footnote">Több étkezés is kijelölhető.</p>
+          </section>
+        </aside>
+
+        <section class="results" aria-labelledby="results-title">
+          <div class="results-head">
+            <h2 id="results-title">Összes recept</h2>
+            <label class="sort-control" for="sort">
+              <span>Rendezés</span>
+              <select id="sort">
+                <option value="name">Név szerint</option>
+                <option value="calories-asc">Kalória: növekvő</option>
+                <option value="calories-desc">Kalória: csökkenő</option>
+              </select>
+            </label>
+          </div>
+          <div class="recipe-grid" id="recipe-grid" aria-live="polite"></div>
+        </section>
+      </div>
+
+      <section class="load-state" id="load-state" aria-live="polite">
+        <h2>Receptek betöltése</h2>
+        <p id="load-message">A receptgyűjtemény előkészítése…</p>
+        <label class="load-button" id="file-label" for="file-input" hidden
+          >JSON-fájl kiválasztása</label
+        >
+        <input
+          id="file-input"
+          type="file"
+          accept="application/json,.json"
+          hidden
+        />
+      </section>
+    </main>
+
+    <dialog id="recipe-dialog" aria-labelledby="detail-title">
+      <div class="dialog-scroll">
+        <div class="dialog-top">
+          <button
+            class="close-button"
+            id="close-dialog"
+            type="button"
+            aria-label="Bezárás"
+          >
+            ×
+          </button>
+        </div>
+        <article class="detail-content" id="detail-content"></article>
+      </div>
+    </dialog>
+
+    <script type="module">
+      const state = {
+        recipes: [],
+        taste: null,
+        occasions: new Set(),
+        query: "",
+        sort: "name",
+      };
+      const byId = (id) => document.getElementById(id);
+      const grid = byId("recipe-grid");
+      const searchInput = byId("search");
+      const countOutput = byId("result-count");
+
+      function fold(value) {
+        return String(value ?? "")
+          .toLocaleLowerCase("hu")
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+      }
+
+      function plainText(html) {
+        const doc = new DOMParser().parseFromString(
+          String(html ?? ""),
+          "text/html",
+        );
+        return doc.body.textContent || "";
+      }
+
+      function categoryOf(recipe) {
+        return recipe.category || "Kategória nélkül";
+      }
+
+      function tasteOf(recipe) {
+        const category = fold(categoryOf(recipe));
+        if (
+          category.includes("desszert") ||
+          category.includes("reggeli - edes") ||
+          category.includes("smoothie") ||
+          category.includes("ninja creami")
+        )
+          return "sweet";
+        if (
+          category.includes("reggeli - sos") ||
+          category.includes("foetelek") ||
+          category.includes("gyorskajak") ||
+          category.includes("fozelekek") ||
+          category.includes("levesek") ||
+          category.includes("sos nasik") ||
+          category.includes("szendvicskremek")
+        )
+          return "savory";
+        return null;
+      }
+
+      function occasionsOf(recipe) {
+        const category = fold(categoryOf(recipe));
+        const tags = new Set();
+        if (category.startsWith("reggeli")) tags.add("breakfast");
+        if (
+          category.includes("foetelek") ||
+          category.includes("fozelekek") ||
+          category.includes("levesek")
+        ) {
+          tags.add("lunch");
+          tags.add("dinner");
+        }
+        if (category.includes("gyorskajak")) {
+          tags.add("lunch");
+          tags.add("dinner");
+          tags.add("snack");
+        }
+        if (
+          category.includes("desszert") ||
+          category.includes("sos nasik") ||
+          category.includes("ninja creami") ||
+          category.includes("smoothie") ||
+          category.includes("szendvicskremek")
+        )
+          tags.add("snack");
+        return tags;
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? "").replace(
+          /[&<>"']/g,
+          (character) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            })[character],
+        );
+      }
+
+      function safeRichText(html) {
+        const parsed = new DOMParser().parseFromString(
+          String(html ?? ""),
+          "text/html",
+        );
+        const allowed = new Set([
+          "p",
+          "br",
+          "ol",
+          "ul",
+          "li",
+          "strong",
+          "b",
+          "em",
+          "i",
+          "a",
+          "pre",
+          "code",
+        ]);
+        function clean(node) {
+          if (node.nodeType === Node.TEXT_NODE)
+            return escapeHtml(node.nodeValue);
+          if (node.nodeType !== Node.ELEMENT_NODE) return "";
+          const tag = node.tagName.toLowerCase();
+          const children = Array.from(node.childNodes, clean).join("");
+          if (!allowed.has(tag)) return children;
+          if (tag === "br") return "<br>";
+          if (tag === "a") {
+            const href = node.getAttribute("href") || "";
+            if (!/^(https?:|mailto:|\/)/i.test(href)) return children;
+            return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${children}</a>`;
+          }
+          return `<${tag}>${children}</${tag}>`;
+        }
+        return Array.from(parsed.body.childNodes, clean).join("");
+      }
+
+      function caloriesOf(recipe) {
+        const value = Number(recipe.calories_per_serving);
+        if (Number.isFinite(value) && value > 0) return value;
+        const label = String(recipe.label ?? "").toLocaleLowerCase("hu");
+        const number = Number.parseInt(label.split("kcal", 1)[0], 10);
+        return Number.isFinite(number) ? number : null;
+      }
+
+      function matches(recipe) {
+        const category = categoryOf(recipe);
+        if (state.taste && tasteOf(recipe) !== state.taste) return false;
+        if (state.occasions.size) {
+          const recipeOccasions = occasionsOf(recipe);
+          if (
+            ![...state.occasions].some((occasion) =>
+              recipeOccasions.has(occasion),
+            )
+          )
+            return false;
+        }
+        if (state.query) {
+          const searchable = fold(
+            [
+              recipe.name,
+              category,
+              recipe.label,
+              Array.isArray(recipe.ingredients)
+                ? recipe.ingredients.join(" ")
+                : recipe.ingredients,
+              plainText(recipe.instructions),
+            ].join(" "),
+          );
+          if (!searchable.includes(fold(state.query))) return false;
+        }
+        return true;
+      }
+
+      function sortedRecipes() {
+        const result = state.recipes.filter(matches);
+        if (state.sort === "calories-asc")
+          result.sort(
+            (a, b) => (caloriesOf(a) ?? Infinity) - (caloriesOf(b) ?? Infinity),
+          );
+        else if (state.sort === "calories-desc")
+          result.sort(
+            (a, b) =>
+              (caloriesOf(b) ?? -Infinity) - (caloriesOf(a) ?? -Infinity),
+          );
+        else result.sort((a, b) => a.name.localeCompare(b.name, "hu"));
+        return result;
+      }
+
+      function macrosOf(recipe) {
+        const label = String(recipe.label ?? "");
+        const open = label.indexOf("(");
+        const close = label.indexOf(")", open + 1);
+        return open >= 0 && close > open
+          ? label
+              .slice(open + 1, close)
+              .split(",")
+              .map((part) => part.trim())
+              .join(" · ")
+          : "";
+      }
+
+      function render() {
+        const recipes = sortedRecipes();
+        countOutput.textContent = `${recipes.length} / ${state.recipes.length} recept`;
+        byId("results-title").textContent =
+          state.query || state.taste || state.occasions.size
+            ? "Találatok"
+            : "Összes recept";
+        if (!recipes.length) {
+          grid.innerHTML =
+            '<div class="empty-state"><h3>Nincs ilyen recept</h3><p>Próbálj más keresést vagy törölj egy szűrőt.</p></div>';
+          return;
+        }
+        grid.innerHTML = recipes
+          .map((recipe, index) => {
+            const ingredients = Array.isArray(recipe.ingredients)
+              ? recipe.ingredients.join(" · ")
+              : String(recipe.ingredients ?? "");
+            const accent =
+              tasteOf(recipe) === "sweet" ? "var(--tomato)" : "var(--green)";
+            const calories = caloriesOf(recipe);
+            return `<button class="recipe-card" type="button" data-id="${escapeHtml(recipe.id)}" style="--card-accent:${accent}" aria-label="${escapeHtml(recipe.name)}, részletek">
+          <span class="card-top"><span class="category-label">${escapeHtml(categoryOf(recipe))}</span><span class="calorie-label">${calories === null ? "" : `${calories} kcal`}</span></span>
+          <h3>${escapeHtml(recipe.name || "Névtelen recept")}</h3>
+          <p class="macro-line">${escapeHtml(macrosOf(recipe))}</p>
+          <p class="ingredient-preview">${escapeHtml(ingredients)}</p>
+        </button>`;
+          })
+          .join("");
+      }
+
+      function openRecipe(id) {
+        const recipe = state.recipes.find((item) => String(item.id) === id);
+        if (!recipe) return;
+        const ingredients = Array.isArray(recipe.ingredients)
+          ? recipe.ingredients
+          : String(recipe.ingredients ?? "")
+              .split(/\n+/)
+              .filter(Boolean);
+        const calories = caloriesOf(recipe);
+        byId("detail-content").innerHTML = `
+        <p class="detail-category">${escapeHtml(categoryOf(recipe))}</p>
+        <h2 id="detail-title">${escapeHtml(recipe.name || "Névtelen recept")}</h2>
+        <div class="detail-meta">
+          ${calories === null ? "" : `<span class="meta-pill calories">${calories} kcal / adag</span>`}
+          ${macrosOf(recipe) ? `<span class="meta-pill">${escapeHtml(macrosOf(recipe))}</span>` : ""}
+        </div>
+        <section class="detail-section"><h3>Hozzávalók</h3><ul class="ingredient-list">${ingredients.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></section>
+        <section class="detail-section"><h3>Elkészítés</h3><div class="instructions">${safeRichText(recipe.instructions || "<p>Ehhez a recepthez nincs elkészítési leírás.</p>")}</div></section>
+        <p class="footer-note">A tápértékek a receptben szereplő adatok alapján.</p>`;
+        byId("recipe-dialog").showModal();
+      }
+
+      function setTaste(taste) {
+        state.taste = state.taste === taste ? null : taste;
+        document.querySelectorAll("[data-taste]").forEach((button) => {
+          button.setAttribute(
+            "aria-pressed",
+            String(button.dataset.taste === state.taste),
+          );
+        });
+        render();
+      }
+
+      function toggleOccasion(occasion, button) {
+        if (state.occasions.has(occasion)) state.occasions.delete(occasion);
+        else state.occasions.add(occasion);
+        button.setAttribute(
+          "aria-pressed",
+          String(state.occasions.has(occasion)),
+        );
+        render();
+      }
+
+      function showRecipes(recipes) {
+        if (!Array.isArray(recipes))
+          throw new Error('A JSON gyökérszintjén "recipes" tömb szükséges.');
+        state.recipes = recipes;
+        byId("load-state").hidden = true;
+        byId("app").hidden = false;
+        render();
+      }
+
+      async function loadDefault() {
+        try {
+          const response = await fetch("./recipes.json");
+          if (!response.ok) throw new Error("A recipes.json nem tölthető be.");
+          const data = await response.json();
+          showRecipes(data.recipes);
+        } catch (error) {
+          const detail =
+            error instanceof Error
+              ? error.message
+              : "Ismeretlen betöltési hiba.";
+          byId("load-message").textContent =
+            `${detail} Válaszd ki a recipes.json fájlt.`;
+          byId("file-label").hidden = false;
+        }
+      }
+
+      searchInput.addEventListener("input", (event) => {
+        state.query = event.target.value.trim();
+        render();
+      });
+      document
+        .querySelectorAll("[data-taste]")
+        .forEach((button) =>
+          button.addEventListener("click", () =>
+            setTaste(button.dataset.taste),
+          ),
+        );
+      document
+        .querySelectorAll("[data-occasion]")
+        .forEach((button) =>
+          button.addEventListener("click", () =>
+            toggleOccasion(button.dataset.occasion, button),
+          ),
+        );
+      byId("sort").addEventListener("change", (event) => {
+        state.sort = event.target.value;
+        render();
+      });
+      byId("clear-filters").addEventListener("click", () => {
+        state.taste = null;
+        state.occasions.clear();
+        state.query = "";
+        searchInput.value = "";
+        document
+          .querySelectorAll("[data-taste], [data-occasion]")
+          .forEach((button) => button.setAttribute("aria-pressed", "false"));
+        render();
+      });
+      grid.addEventListener("click", (event) => {
+        const card = event.target.closest("[data-id]");
+        if (card) openRecipe(card.dataset.id);
+      });
+      byId("close-dialog").addEventListener("click", () =>
+        byId("recipe-dialog").close(),
+      );
+      byId("recipe-dialog").addEventListener("click", (event) => {
+        if (event.target === byId("recipe-dialog"))
+          byId("recipe-dialog").close();
+      });
+      byId("file-input").addEventListener("change", async (event) => {
+        const file = event.target.files?.[0];
+        if (!file) return;
+        try {
+          const data = JSON.parse(await file.text());
+          showRecipes(data.recipes);
+        } catch (error) {
+          const detail =
+            error instanceof Error ? error.message : "Ismeretlen JSON-hiba.";
+          byId("load-message").textContent = `A fájl nem olvasható: ${detail}`;
+        }
+      });
+
+      await loadDefault();
+    </script>
+  </body>
+</html>
