@@ -7927,6 +7927,136 @@
         "só, bors, 0,05tk füstölt paprika"
       ],
       "label": "88kcal (8.9g f, 5.1g zs, 1.1g sz)"
+    },
+    {
+      "id": "d6f1e81a-f0ae-4431-9660-af59c7ec625d",
+      "name": "Mákos-szilvás zabkása",
+      "instructions": "<p>Elkészítés:</p>\n<ol>\n<li>Keverd össze a zabpelyhet, a fehérjeport és egy csipet sót a tejjel majd keverd hozzá a joghurtot is. Oszdd el annyi tálba ahány adagba szeretnéd.</li>\n<li>Vágd szeletekre a szilvát helyezd egy kis lábasba vagy serpenyőbe, adj hozzá 100ml vizet, kb 1/3tk fahéjat és 1tk édesítőt. Közepes lángon főzd addig amíg a víz el nem fő és be nem sűrűsödik majd oszdd el a zabkásák tetejére.</li>\n<li>Keverd össze a mákot ugyanannyi édesítővel és szórd meg a tetejét.</li>\n</ol>\n<p>Kalória és makrók egy adagra /3:<br />\n309 kalória: 28.4g fehérje / 5.6g zsír / 34.1g szénhidrát</p>\n<p>Kalória és makrók egy adagra /2:<br />\n464 kalória: 42.7g fehérje / 8.3g zsír / 51.2g szénhidrát</p>\n<p>Kalória és makrók az egész receptre:<br />\n929 kalória: 85.3g fehérje / 16.7g zsír / 102.5g szénhidrát</p>\n",
+      "calories_per_serving": 309,
+      "category": "Reggeli - édes",
+      "ingredients": [
+        "100g zabpehely",
+        "150g Skyr joghurt",
+        "300ml 1.5%-os tej",
+        "60g fehérjepor",
+        "150g szilva",
+        "10g őrölt mák",
+        "édesítő, fahéj, csipet só"
+      ],
+      "label": "309kcal (28.4g f, 5.6g zs, 34.1g sz)"
+    },
+    {
+      "id": "3e350a68-9e40-4beb-b92d-fb2d398214e6",
+      "name": "Túrós pizzás melegszendvics",
+      "instructions": "<p>Elkészítés:</p>\n<ol>\n<li>Pirítsd meg a kenyered, majd kendd meg a paradicsomszósszal, halmozd rá az összetört túrót - sózd, borsozd, kis szárított bazsalikom majd rá a kolbász szeletek és a reszelt sajt.</li>\n<li>Tedd be 200 fokra előmelegített sütőbe 5-10 percre amíg megpirul a sajt.</li>\n</ol>\n<p>Kalória és makrók egy darabra /2:<br />\n221 kalória: 18.9g fehérje / 4.4g zsír / 27g szénhidrát</p>\n<p>Kalória és makrók az egész receptre:<br />\n443 kalória: 37.8g fehérje / 8.8g zsír / 54g szénhidrát</p>\n",
+      "calories_per_serving": 221,
+      "category": "\"Gyorskaják\": Szendvics/Wrap/Taco/Burger/Pizza",
+      "ingredients": [
+        "100g kovászos kenyér (vagy bármilyen 190 kalóriáért)",
+        "100g pizzás paradicsomszósz (vagy sima)",
+        "120g Nádudvari Fitt túró",
+        "10g Gyulai szeletelt kolbász",
+        "30g light trappista sajt"
+      ],
+      "label": "221kcal (18.9g f, 4.4g zs, 27g sz)"
+    },
+    {
+      "id": "4e55124b-a15a-44c3-9f07-96ce5d5897b0",
+      "name": "Mézes-mustáros csirkecomb rizzsel - egy tepsis",
+      "instructions": "<p>Elkészítés:</p>\n<p>Egy sütőálló serpenyőben olajsprayel kezdd el fonnyasztani a szeletekre vágott hagymát. Add hozzá a zúzott fokhagymát, 100ml vizet és fedő alatt párold amíg jó puha nem lesz a hagyma.<br />\nAdd hozzá a rozmaringot és a zsályát, a rizst, még 600ml vizet és egy tyúkhúsleves kockát. Tegyél rá fedőt (vagy alufóliát) és tedd be 200 fokra előmelegített sütőbe hőlégkeverésre 20 percre.<br />\nKözben keverd össze a pácot a húshoz majd jól forgasd bele és hagyd benne amíg a rizs 'sül'. 20 perc után keverd bele a rikotta sajtot.<br />\nTedd a csirkecombot a rizs tetejére, öntsd rá a maradék pácot és fedő nélkül tedd vissza a sütőbe még 20 perre. Fél úton fordítsd meg a csirkecombokat.</p>\n<p>Kalória és makrók egy adagra /4:<br />\n396 kalória: 30.4g fehérje / 7g zsír / 52.5g szénhidrát</p>\n<p>Kalória és makrók egy adagra /3:<br />\n527 kalória: 40.5g fehérje / 9.4g zsír / 69.9g szénhidrát</p>\n<p>Kalória és makrók az egész receptre:<br />\n1582 kalória: 121.7g fehérje / 28.1g zsír / 210g szénhidrát</p>\n",
+      "calories_per_serving": 396,
+      "category": "Főételek - ebéd & vacsora",
+      "ingredients": [
+        "150g vöröshagyma",
+        "3 gerezd fokhagyma",
+        "1/2tk szárított rozmaring",
+        "1/2tk szárított zsálya",
+        "600ml víz",
+        "1 leves kocka",
+        "200g rizs",
+        "80g ricotta",
+        "Hús:",
+        "500g csirkecombfilé",
+        "15g mustár",
+        "30g méz",
+        "1 citrom leve",
+        "só, bors ízlés szerint"
+      ],
+      "label": "396kcal (30.4g f, 7g zs, 52.5g sz)"
+    },
+    {
+      "id": "bb8002b0-0f6d-4f88-b639-c68320b9ad70",
+      "name": "Csokis keksz",
+      "instructions": "<p>Elkészítés:</p>\n<ol>\n<li>Olvaszd meg a vajat mikróban, majd keverd hozzá a tojás sárgáját és az összes többi hozzávalót. Végül forgasd bele az apróra vágott étcsokit is.</li>\n<li>Egy nagyon száraz morzsálódós masszát kapsz, de ha szükséges kézzel dolgozd össze. Készíts belőle 3 golyót majd nyomkodd le a sütőpapírodon.</li>\n<li>Süsd 170 fokra előmelegített sütőben 8-10 percig. Hagyd teljesen kihűlni mielőtt eszed.</li>\n</ol>\n<p>Kalória és makrók egy darabra /3:<br />\n169 kalória: 9.6g fehérje / 10.9g zsír / 7.5g szénhidrát</p>\n<p>Kalória és makrók az egész receptre:<br />\n508 kalória: 28.7g fehérje / 32.6g zsír / 22.6g szénhidrát</p>\n",
+      "calories_per_serving": 169,
+      "category": "Desszert",
+      "ingredients": [
+        "25g vaj",
+        "1 tojás sárgája",
+        "3tk édesítő",
+        "10g 15-18%-os kakaópor",
+        "15g liszt",
+        "30g fehérjepor",
+        "1/4tk szódabikarbóna",
+        "jó nagy csipet só",
+        "1tk vanília aroma",
+        "15g étcsokoládé"
+      ],
+      "label": "169kcal (9.6g f, 10.9g zs, 7.5g sz)"
+    },
+    {
+      "id": "d83b4e69-ba1f-4a31-b71a-a75e3b3053bf",
+      "name": "Sült kacsamell almaecetes lilakáposztával",
+      "instructions": "<p>Elkészítés:</p>\n<ol>\n<li>Irdald be a kacsa bőrét úgy, hogy ne vágj bele a húsába. Tedd egy sűtőálló hideg serpenyőbe, majd közepes lángon kezdd el melegíteni a tűzhelyen. Kb 10-15 percig süsd amíg kisül a zsírja és annyira megsül a bőre amennyire szeretnéd. Sózd, borsozd majd fordítsd át hússal lefelé és süsd még 3-5 percig. Dobd bele a rozmaring ágakat, majd tedd be 180 fokra előmelegített sütőbe további 15-20 percre. Amikor kész szedd ki a zsírjából a melleket.</li>\n<li>Egy nagy serpenyőbe tegyél bele 300ml vizet, a mézet, az egész fahéjat és a szegfűszeget. Forrald fel, majd add hozzá a nagyon vékonyra szeletelt káposztát és fedő alatt főzd 10-15 percig amíg a káposzta meg nem puhul. Időnként kevergesd meg.</li>\n<li>Ha már puha a káposzta add hozzá a felkockázott almád, sót, és annyi almaecetet ahogy neked ízlik. Főzd még pár percig és tálalhatod is.<br />\n(A káposzta nagyon nagy adag, nekünk bőven elég volt köretnek de ha családnak készíted nyugodtan készíts hozzá krumplit, rizst stb.)</li>\n</ol>\n<p>Kalória és makrók egy adagra /5:<br />\n397 kalória: 36g fehérje / 15.4g zsír / 26g szénhidrát</p>\n<p>Kalória és makrók egy adagra /4:<br />\n496 kalória: 45g fehérje / 19.3g zsír / 32.5g szénhidrát</p>\n<p>Kalória és makrók az egész receptre:<br />\n1986 kalória: 179.9g fehérje / 77.1g zsír / 130g szénhidrát</p>\n<p>Kalória és makrók csak az almaecetes káposztára hús nélkül:<br />\n572 kalória: 8g fehérje / 1g zsír / 130g szénhidrát</p>\n",
+      "calories_per_serving": 397,
+      "category": "Főételek - ebéd & vacsora",
+      "ingredients": [
+        "700g bőrös kacsamell (csont nélküli)",
+        "100g méz",
+        "500g lilakáposzta",
+        "150g alma",
+        "4db rúd egész fahéj",
+        "6-8db szegfűszeg",
+        "2-3 ág rozmaring",
+        "2-4ek almaecet (ízlés szerint)",
+        "só,bors"
+      ],
+      "label": "397kcal (36g f, 15.4g zs, 26g sz)"
+    },
+    {
+      "id": "d96cf654-7ebb-4df5-a6ea-d57c7448b8d9",
+      "name": "Csirkés fajita sült tészta",
+      "instructions": "<p>Elkészítés:</p>\n<ol>\n<li>Főzd meg a tésztát a tasakon található utasítás szerint.</li>\n<li>Vágd fel szeletekre a hagymát és a paprikát, tetszőleges nagyságúra a csirkemellet. Olajsprayvel befújt serpenyőben közepes lángon 7-10 perc alatt főzd meg a csirkét és a zöldségeket együtt. Ha már megfőtt a csirke fűszerezd. Jól keverd össze.</li>\n<li>Egy nagy hőálló tálba tedd bele a főtt tésztát, krémsajtot, salsa szószt és a főtt csirkés-zöldséges mixet. Jól keverd össze, tedd rá a reszelt sajtot majd süsd 20 percig 180 fokra előmelegített sütőben.</li>\n</ol>\n<p>Kalória és makrók egy adagra /5:<br />\n376 kalória: 41.1g fehérje / 3.5g zsír / 38.8g szénhidrát</p>\n<p>Kalória és makrók egy adagra /4:<br />\n470 kalória: 51.4g fehérje / 4.4g zsír / 48.5g szénhidrát</p>\n<p>Kalória és makrók az egész receptre:<br />\n1881 kalória: 205.7g fehérje / 17.6g zsír / 193.9g szénhidrát</p>\n",
+      "calories_per_serving": 376,
+      "category": "Főételek - ebéd & vacsora",
+      "ingredients": [
+        "600g csirkemellfilé",
+        "200g tészta",
+        "250g pritaminpaprika (vagy kaliforniai)",
+        "150g vöröshagyma",
+        "150g 0,2%-os krémsajt",
+        "1 csomag (200ml) Chio salsa szósz",
+        "1 csomag fajita fűszerkeverék vagy: 1tk pirospaprika, 1 tk füstölt pirospaprika, 1/2tk őrölt kömény, 1/2tk szárított petrezselyem, só, bors",
+        "40g light trappista sajt"
+      ],
+      "label": "376kcal (41.1g f, 3.5g zs, 38.8g sz)"
+    },
+    {
+      "id": "9158bf6d-3ff2-4869-b94f-a74036bd45ab",
+      "name": "Marharagu sütőtökpürével",
+      "instructions": "<p>Elkészítés:</p>\n<ol>\n<li>Nagyon magas lángon forrósíts fel egy lábast, majd fújd be olajsprayvel és tedd bele a 2-3 centisre vágott (és tisztított) marhahúst. Kicsit meg akarjuk pirítani kívülről, hagyd pár percig mindegyik oldalát majd tedd félre a húst.</li>\n<li>Ugyanabban a lábasban újra fújj olajsprayt és tedd bele az apróra vágott hagymát és a zúzott fokhagymát. Időnként kevergetve közepes lángon főzd meg amíg nem lesz üveges a hagyma, majd add hozzá a paradicsompürét és a lisztet és keverd el. Add hozzá a fűszereket, a húst és önts rá 400ml vizet. Forrald fel, majd vedd le a lángot annyira, hogy már ne forrjon (én csak 3/18-on főztem).</li>\n<li>Főzd 2-3 óráig fedő alatt amíg a hús nem ízlésednek valóan puha.</li>\n<li>Amikor majdnem kész a hús vágd fel minél apróbbra a tököt és lefedett tálban mikrózd 3x3 percig. Minden kör előtt keverd meg. Alternatívaként meg is sütheted sütőben a tököt vagy megfőzheted vízben. Villával törd össze és adj hozzá sót-borsot.</li>\n</ol>\n<p>Kalória és makrók egy adagra /3:<br />\n348 kalória: 41.8g fehérje / 6.7g zsír / 28g szénhidrát</p>\n<p>Kalória és makrók egy adagra /2:<br />\n523 kalória: 62.8g fehérje / 10.1g zsír / 42.1g szénhidrát</p>\n<p>Kalória és makrók az egész receptre:<br />\n1046 kalória: 125.7g fehérje / 20.3g zsír / 84.2g szénhidrát</p>\n",
+      "calories_per_serving": 348,
+      "category": "Főételek - ebéd & vacsora",
+      "ingredients": [
+        "500g marhacomb",
+        "150g vöröshagyma",
+        "1-2 gerezd fokhagyma",
+        "50g paradicsompüré",
+        "20g liszt",
+        "1tk őrölt kömény, 1/2tk bors, 3tk pirospaprika, 2db babérlevél, 1tk só (vagy ízlés szerint)",
+        "800g sütőtök"
+      ],
+      "label": "348kcal (41.8g f, 6.7g zs, 28g sz)"
     }
   ]
 }
