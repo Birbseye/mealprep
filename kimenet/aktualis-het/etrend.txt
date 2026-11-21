@@ -3,22 +3,23 @@
 Feltevések:
 - Szandi 4 napot eszik, vacsorát csak 3 napon (4 reggeli, 4 ebéd, 3 vacsora, 4 snack).
 - Csabi 5 napot eszik, vacsorát csak 3 napon (5 reggeli, 5 ebéd, 3 vacsora, 5 snack).
-- Az adatbázis receptjei 1 adagosak, ezért a screenshot ételeit név szerint a legközelebbi receptre képeztem le (lásd lent).
-- A screenshotban szereplő extrák (ebédhez 100 kcal zöldség, Csabi vacsorájához 50 kcal zöldség) a receptek kcal-ján felül értendők.
-- A csirkecomb ebédnél a 4-be osztott adag kb. 398 kcal, ez a Mediterrán rizs csirkecombbal receptnek felel meg (398 + 100 kcal zöldség = 498, a screenshot 496).
+- A reggeli 1,5 adag (az adatbázisban 1 adag = 309 kcal, ezért 1,5 adag = 464 kcal, ahogy a screenshotban).
+- Az ebédhez adagonként kb. 250 g brokkoli (kb. 100 kcal) jár, Csabi vacsorájához kb. 150 g zöldség (kb. 50 kcal). Ezek a receptek kcal-ján felül értendők.
 
 Menü:
-- Reggeli: 'Mandulás croissant' sült zabkása (nem pontos találat, a screenshot 464 kcal, az adatbázis 453 kcal). Szandi 1 adag, 453 kcal. Csabi 1 adag, 453 kcal.
-- Ebéd: Mediterrán rizs csirkecombbal - egy tepsis. Szandi 1 adag, 398 kcal (+ kb. 100 kcal zöldség = 498). Csabi 1 adag, 398 kcal (+ kb. 100 kcal zöldség = 498).
-- Vacsora: Bagel (vagy zsemle) melegszendvics (nem pontos találat, a screenshot 443 kcal, az adatbázis 378 kcal). Szandi 1 adag, 378 kcal. Csabi 1 adag, 378 kcal (+ kb. 50 kcal zöldség = 428).
-- Snack: Csokis-diós zabkeksz (nem pontos találat, a screenshot 169 kcal, az adatbázis 152 kcal). Szandi 1 db, 152 kcal. Csabi 2 db, 304 kcal.
+- Reggeli: Mákos-szilvás zabkása. Szandi 1,5 adag, 464 kcal. Csabi 1,5 adag, 464 kcal.
+- Ebéd: Mézes-mustáros csirkecomb rizzsel - egy tepsis. Szandi 1 adag, 396 kcal (+ 100 kcal zöldség = 496). Csabi 1 adag, 396 kcal (+ 100 kcal zöldség = 496).
+- Vacsora: Túrós pizzás melegszendvics (1 adag = 1 szelet). Szandi 2 szelet, 442 kcal. Csabi 2 szelet, 442 kcal (+ 50 kcal zöldség = 492).
+- Snack: Csokis keksz. Szandi 1 db, 169 kcal. Csabi 2 db, 338 kcal.
 
-Napi összes kcal (recept + extra zöldség, vacsorás napon):
-- Szandi: 1381 kcal receptből, + 100 kcal ebéd zöldség = 1481 kcal (cél a receptekre: 1450-1500)
-- Csabi: 1533 kcal receptből, + 100 kcal ebéd zöldség + 50 kcal vacsora zöldség = 1683 kcal (cél a receptekre: 1650-1700)
+Napi összes kcal (vacsorás napon):
+- Szandi: 1471 kcal receptből + 100 kcal zöldség = 1571 kcal
+- Csabi: 1640 kcal receptből + 100 + 50 kcal zöldség = 1790 kcal
 
 Kiesések:
-- Szandi 4 napig eszik, 1 napon vacsora nélkül (az a nap kb. 378 kcal-lal kevesebb).
-- Csabi 5 napig eszik, 2 napon vacsora nélkül (azok a napok kb. 428 kcal-lal kevesebbek).
+- Szandi 4 napig eszik, 1 napon vacsora nélkül (az a nap 442 kcal-lal kevesebb).
+- Csabi 5 napig eszik, 2 napon vacsora nélkül (azok a napok 492 kcal-lal kevesebbek).
 
-Csak 1 étel van, amiben Szandi és Csabi adagja eltér: a snack (Csabi dupla).
+Csak a snackben tér el Szandi és Csabi adagja (Csabi dupla).
+
+Megjegyzés: az ebéd, a vacsora és a snack az előző héten is szerepelt, de ezt te választottad így.

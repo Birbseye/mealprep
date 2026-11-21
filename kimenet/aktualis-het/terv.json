@@ -2,25 +2,25 @@
  "menu": [
   {
    "slot": "reggeli",
-   "recipe": "50d6b350",
-   "szandi": 1,
-   "csabi": 1
+   "recipe": "d6f1e81a",
+   "szandi": 1.5,
+   "csabi": 1.5
   },
   {
    "slot": "ebéd",
-   "recipe": "046620d3",
+   "recipe": "4e55124b",
    "szandi": 1,
    "csabi": 1
   },
   {
    "slot": "vacsora",
-   "recipe": "d702ccb1",
-   "szandi": 1,
-   "csabi": 1
+   "recipe": "3e350a68",
+   "szandi": 2,
+   "csabi": 2
   },
   {
    "slot": "snack",
-   "recipe": "4aedc716",
+   "recipe": "bb8002b0",
    "szandi": 1,
    "csabi": 2
   }
